@@ -76,3 +76,5 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit2"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3"
 }
+
+apply plugin: "io.gitlab.arturbosch.detekt"
