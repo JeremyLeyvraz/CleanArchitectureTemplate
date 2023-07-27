@@ -8,7 +8,7 @@ on:
 
 jobs:
   buildAndTest:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout the code to specific branch
         uses: actions/checkout@v3
