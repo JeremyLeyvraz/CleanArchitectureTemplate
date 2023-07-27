@@ -27,9 +27,7 @@ jobs:
       - name: Run unit tests
         run: ./gradlew test
       - name: Start emulator
-        run: |
-          echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n emu -k "system-images;android-29;google_apis;x86"
-          $ANDROID_HOME/emulator/emulator -avd emu -no-window &
-          adb shell getprop init.svc.bootanim | grep -v stopped
-      - name: Run android tests
-        run: ./gradlew connectedAndroidTest
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: ./gradlew connectedAndroidTest
