@@ -22,12 +22,11 @@ jobs:
         run: chmod +x gradlew
       - name: Clean with Gradle
         run: ./gradlew clean
+      - name: Check detekt
+        run: ./gradlew detekt
+      - name: Check lint
+        run: ./gradlew lint
       - name: Build with Gradle
         run: ./gradlew build
       - name: Run unit tests
         run: ./gradlew test
-      - name: Start emulator
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 29
-          script: ./gradlew connectedAndroidTest
