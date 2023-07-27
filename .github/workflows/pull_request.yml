@@ -20,12 +20,6 @@ jobs:
           cache: gradle
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-#      - name: Clean with Gradle
-#        run: ./gradlew clean
-      - name: Check detekt
-        run: ./gradlew detekt
-      - name: Check lint
-        run: ./gradlew lint
       - name: Build with Gradle
         run: ./gradlew build
       - name: Run unit tests
@@ -41,3 +35,48 @@ jobs:
         with:
           name: apk
           path: app/build/outputs/apk/
+
+  checkDetekt:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code to specific branch
+        uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: gradle
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Check detekt
+        run: ./gradlew detekt
+      - name: Upload detekt report
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          name: detekt_report
+          path: |
+            **/build/reports/
+
+  checkLint:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code to specific branch
+        uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: gradle
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Check lint
+        run: ./gradlew lint
+      - name: Upload lint report
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          name: lint_report
+          path: |
+            **/build/reports/
+    
