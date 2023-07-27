@@ -34,7 +34,8 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: reports
-          path: app/build/reports/
+          path: | 
+            **/build/reports/
 #      - name: Archive APK
 #        uses: actions/upload-artifact@v1
 #        with:
