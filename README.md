@@ -28,7 +28,5 @@ performance leaks, accessibility problems, etc.
 Run Lint with ./gradlew lint
 
 ## ToDo
-- Add a CI
-- Add unit test
 - Add ui test (composable)
 - Clean gradle file (using variable for imports)
