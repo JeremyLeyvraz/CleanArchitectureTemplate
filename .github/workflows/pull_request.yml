@@ -8,7 +8,7 @@ on:
 
 jobs:
   buildAndTest:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the code to specific branch
         uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
           path: app/build/outputs/apk/
 
   checkDetekt:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the code to specific branch
         uses: actions/checkout@v3
@@ -59,7 +59,7 @@ jobs:
             **/build/reports/
 
   checkLint:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the code to specific branch
         uses: actions/checkout@v3

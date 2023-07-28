@@ -27,6 +27,12 @@ Lint is a tool that provides static checks of your Android code in order to iden
 performance leaks, accessibility problems, etc.
 Run Lint with ./gradlew lint
 
+## CI
+The CI is hosted in GitHub. 
+There is only one workflow runs for each pull request.
+This workflow runs detekt and lint, and the project is built and the unit tests are run.
+A pull request can be merged only when the workflow is a success.
+
 ## ToDo
-- Add ui test (composable)
+- Add ui test in CI
 - Clean gradle file (using variable for imports)
