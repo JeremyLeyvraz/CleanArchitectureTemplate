@@ -1,10 +1,9 @@
 buildscript {
     ext {
-        minSdk = 21
+        minSdk = 29
         compileSdk = 33
         targetSdk = 33
 
-        androix_core = "1.10.1"
         androix_appcompat = "1.6.1"
         androix_lifecycle = "2.3.1"
         kotlin_version = "1.8.10"
@@ -12,16 +11,27 @@ buildscript {
         retrofit2 = "2.9.0"
         okhttp3 = "5.0.0-alpha.1"
         hilt_version="2.45"
-        core_ktx_version = "1.10.0"
+        core_ktx_version = "1.10.1"
         lifecycle_version = "2.3.1"
-        activity_compose_version = '1.7.1'
+        activity_compose_version = '1.7.2'
         compose_version = '1.4.2'
-        nav_version = "2.5.3"
+        compose_compiler = '1.4.2'
+        compose_material = '1.4.3'
+        nav_version = "2.6.0"
+
+        // Coil
+        coil_compose = "2.4.0"
+
+        // Unit test
+        junit = "4.13.2"
+
+        // Android test
+        espresso = "3.5.1"
+        android_junit = "1.1.5"
     }
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.4'

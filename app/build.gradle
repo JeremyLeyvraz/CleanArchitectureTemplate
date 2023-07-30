@@ -58,14 +58,14 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     implementation "androidx.activity:activity-compose:$activity_compose_version"
     implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.compiler:compiler:$compose_version"
+    implementation "androidx.compose.compiler:compiler:$compose_compiler"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation "androidx.navigation:navigation-compose:$nav_version"
-    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.material:material:$compose_material"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$compose_version"
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
     implementation "androidx.compose.foundation:foundation:$compose_version"
-    implementation "io.coil-kt:coil-compose:2.4.0"
+    implementation "io.coil-kt:coil-compose:$coil_compose"
 
     // Hilt dependencies
     implementation "androidx.hilt:hilt-navigation-compose:$nav_compose_version"
@@ -76,9 +76,13 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit2"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit2"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3"
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Unit test
+    testImplementation "junit:junit:$junit"
+
+    // Android test
+    androidTestImplementation "androidx.test.ext:junit:$android_junit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
 }
 
 apply plugin: "io.gitlab.arturbosch.detekt"
