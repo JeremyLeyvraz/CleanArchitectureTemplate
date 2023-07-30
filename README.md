@@ -34,5 +34,5 @@ This workflow runs detekt and lint, and the project is built and the unit tests 
 A pull request can be merged only when the workflow is a success.
 
 ## ToDo
+- Update readme to explain all layers, the CI, Lint and Detekt
 - Add ui test in CI
-- Clean gradle file (using variable for imports)
