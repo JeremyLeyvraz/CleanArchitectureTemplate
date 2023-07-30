@@ -58,10 +58,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     implementation "androidx.activity:activity-compose:$activity_compose_version"
     implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.compiler:compiler:$compose_version"
+    implementation "androidx.compose.compiler:compiler:$compose_compiler"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation "androidx.navigation:navigation-compose:$nav_version"
-    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.material:material:$compose_material"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$compose_version"
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
     implementation "androidx.compose.foundation:foundation:$compose_version"
