@@ -5,15 +5,18 @@
 ### App layer
 Simple application to display a message using [HelloUseCase].
 
-### Use case
-Implements a simple use case to display a 'Hello' message.
+### Use case layer
+This layer implements the use cases defined in domain layer.
+It implements a simple use case to display a 'Hello' message.
 The message is generated using a [Message] provides by a repository.
 
-### Data
-Implements a simple repository to get a [Message].
+### Data layer
+This layer implements the repositories defined in domain layer.
+It implements a simple repository to get a [Message].
 
 ### Domain
-Define the model [Message] and the repository and use case interfaces.
+This layer defines all business models, interfaces, use cases.
+It defines the [Message] model and the repository and use case interfaces.
 
 ## Detekt
 Detekt is a static analysis tool for Kotlin. 
@@ -34,5 +37,4 @@ This workflow runs detekt and lint, and the project is built and the unit tests 
 A pull request can be merged only when the workflow is a success.
 
 ## ToDo
-- Update readme to explain all layers, the CI, Lint and Detekt
 - Add ui test in CI
