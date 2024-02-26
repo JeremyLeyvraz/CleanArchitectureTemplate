@@ -7,7 +7,7 @@ import javax.inject.Inject
 /**
  * [MessageRepository] implementation.
  */
-class MessageRepositoryImpl  @Inject constructor() : MessageRepository {
+internal class MessageRepositoryImpl : MessageRepository {
 
     /**
      * Get a message with a [prefix] and a [name].

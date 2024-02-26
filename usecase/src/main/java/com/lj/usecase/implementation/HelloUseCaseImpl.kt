@@ -8,7 +8,9 @@ import javax.inject.Inject
  * [HelloUseCase] implementation:
  * Get a 'Hello message from a [String] using [MessageRepository].
  */
-class HelloUseCaseImpl @Inject constructor(private val repository: MessageRepository) : HelloUseCase {
-    override fun invoke(input: String): String =
-        repository.getMessage("Hello", input).format()
+internal class HelloUseCaseImpl (private val repository: MessageRepository) : HelloUseCase {
+    override fun invoke(input: String): String{
+        return repository.getMessage("Hello", input).format()
+    }
+
 }
