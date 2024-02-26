@@ -4,19 +4,25 @@ import com.lj.data.repository.MessageRepositoryImpl
 import com.lj.domain.repository.MessageRepository
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 /**
  * Module to inject/provide repositories.
  */
 @InstallIn(SingletonComponent::class)
 @Module
-abstract class Singleton {
+
+class Singleton {
 
     /**
      * Provide the implementation of [MessageRepository].
      */
-    @Binds
-    abstract fun provideMessageRepository(repository: MessageRepositoryImpl): MessageRepository
+    @Provides
+    @Singleton
+    fun provideMessageRepository(): MessageRepository{
+        return MessageRepositoryImpl()
+    }
 }
